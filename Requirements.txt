@@ -1,0 +1,17 @@
+# Flask and backend web server
+Flask==2.3.3
+Flask-Cors==4.0.0
+
+# Serial communication for Arduino
+pyserial==3.5
+
+# Data handling and scheduling
+requests==2.31.0
+python-dotenv==1.0.1
+APScheduler==3.10.4
+
+# Optional (for backend chart data / analytics prep)
+pandas==2.2.2
+
+# For production deployment (optional)
+gunicorn==21.2.0
