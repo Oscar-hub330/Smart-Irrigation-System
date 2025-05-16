@@ -36,25 +36,21 @@ A Smart Irrigation System using **Arduino**, **Flask**, and **React** to automat
 
 smart-irrigation/
 │
-├── backend/
-│ ├── app.py
-│ ├── serial_reader.py
-│ ├── scheduler.py
-│ ├── .env
-│ └── requirements.txt
+├──    backend/
+│     ├── app.py
+│     ├── serial_reader.py
+│     ├── scheduler.py
+│     ├── .env
+│     └── requirements.txt
 │
-├── frontend/
-│ ├── public/
-│ └── src/
-│ ├── App.js
-│ ├── components/
-│ └── services/
+      ├── frontend/
+│     ├── public/
+│     └── src/
+│     ├── App.js
+│     ├── components/
+│     └── services/
 │
 └── README.md
-
-yaml
-Copy
-Edit
 
 ---
 
@@ -87,24 +83,14 @@ npm install
 
 npm start
 
-🔄 **Arduino Setup**
-Upload the following sketch to your Arduino:
+🔄 **Arduino SetupArduino Setup (with PlatformIO)**
+Open the firmware/ folder in VS Code with PlatformIO and install the PlatformIO extension on VS code.
 
-cpp
 
-void setup() {
-  Serial.begin(9600);
-}
+📊 **API Endpoints (Flask)** 
 
-void loop() {
-  int moisture = analogRead(A0);  // Read from soil sensor
-  Serial.println(moisture);       // Send to Python
-  delay(1000);
-}
-Connect Arduino to your PC and ensure the port matches the one defined in your serial_reader.py.
-
-📊 API Endpoints (Flask)
 Endpoint	Method	Description
+
 /moisture	GET	Returns current soil moisture
 /irrigate/on	POST	Turns irrigation on
 /irrigate/off	POST	Turns irrigation off
